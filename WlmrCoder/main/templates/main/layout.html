@@ -22,17 +22,15 @@
         <aside class="col-md-4 col-lg-3">
             <img src="{% static 'main/img/11088056.png' %}" alt="кролик" width="150px">
             <h3 class="text-center">Rabit{{caption}}</h3>
-
             {% include 'main/menu.html' %}
-
-
         </aside>
 
         <main class="col-md-8 col-lg-9">
-            {% block content %}
-            <h1>Добро пожаловать на страницу!</h1>
-            <p>Это основное содержимое вашей страницы.</p>
-            {% endblock %}
+            <div class="container mt-5">
+                {% block content %}
+
+                {% endblock %}
+            </div>
         </main>
     </div>
 </div>
