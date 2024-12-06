@@ -1,0 +1,30 @@
+        aside {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        aside img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin: 10px 0;
+        }
+        aside ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+                .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+        }
+        }
