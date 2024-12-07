@@ -3,4 +3,5 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    return render(request, 'main/new2.html')
+    data = {'caption':"Django"}
+    return render(request, 'news/news.html', data)
