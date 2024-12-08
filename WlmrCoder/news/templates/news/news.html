@@ -10,17 +10,17 @@
         <h1 class="text-center mb-4">Новостная страница</h1>
         <div class="card">
             <div class="card-body">
-                {% if news %}
+
                 {% for new in news %}
-                    <div>
+                    <div class="card-body">
                         <h3>{{new.title}}</h3>
                         <p>{{new.short_description}}</p>
                         <p>{{new.text}}</p>
                         <p>{{new.pub_date}}</p>
-                        <p>{{new.author}}</p>
+                        <p>Автор: {{new.author}}</p>
+
                     </div>
                 {% endfor %}
-                {% endif %}
 
             </div>
         </div>
