@@ -10,18 +10,22 @@
         <h1 class="text-center mb-4">Новостная страница</h1>
         <div class="card">
             <div class="card-body">
-
+                {% if news %}
                 {% for new in news %}
-                    <div class="card-body">
-                        <h3>{{new.title}}</h3>
-                        <p>{{new.short_description}}</p>
-                        <p>{{new.text}}</p>
-                        <p>{{new.pub_date}}</p>
-                        <p>Автор: {{new.author}}</p>
+                <div class="card" >
+                  <div class="card-body">
+                    <h5 class="card-title">{{new.title}}</h5>
+                    <p class="card-text">{{new.short_description}}</p>
+                    <p class="card-text">{{new.text}}</p>
+                    <p class="card-text">{{new.pub_date}}</p>
+                    <p class="card-text">Автор: {{new.author}}</p>
 
-                    </div>
+                  </div>
+                </div>
                 {% endfor %}
-
+                {% else  %}
+                    <h4>Новостей пока нет.</h4>
+                {% endif %}
             </div>
         </div>
 
