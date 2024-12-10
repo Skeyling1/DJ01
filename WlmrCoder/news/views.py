@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import News_post
 from .forms import News_postForm
 
@@ -10,7 +10,15 @@ def home(request):
     return render(request, 'news/news.html', data)
 
 def add_news(request):
+    error = ""
+    if request.method == 'POST':
+        form = News_postForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('news_home')
+        else:
+            error = "Данные были заполнены не корректно"
     form = News_postForm()
-    data = {'caption': "Django", 'form': form}
+    data = {'caption': "Django", 'form': form, 'error': error}
     return render(request, 'news/news_add.html', data)
 

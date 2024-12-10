@@ -12,32 +12,23 @@
      <form method="post">
          {% csrf_token %}
             <div class="form-group">
-                <label for="title">Заголовок новости</label>
-                <input type="text" class="form-control" id="title" placeholder="Заголовок новости" required>
                 {{ form.title }}
             </div>
             <div class="form-group">
-                <label for="short-description">Краткое описание новости</label>
-                <input type="text" class="form-control" id="short-description" placeholder="Краткое описание новости" required>
-                {{ form.short.description }}
+                {{ form.short_description }}
             </div>
             <div class="form-group">
-                <label for="news-content">Содержание новости</label>
-                <textarea class="form-control" id="news-content" placeholder="Содержание новости" rows="4" required></textarea>
                 {{ form.text }}
             </div>
             <div class="form-group">
-                <label for="date">Дата</label>
-                <input type="date" class="form-control" id="date" required>
                 {{ form.pub_date }}
             </div>
              <div class="form-group">
-                <label for="author">Автор</label>
-                <input type="text" class="form-control" id="author" placeholder="Автор" required>
                  {{ form.author }}
             </div>
             <button type="submit" class="btn btn-primary">Добавить новость</button>
         </form>
+    <p>{{error}}</p>
     </div>
 
  </div>
